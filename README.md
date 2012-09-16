@@ -20,9 +20,26 @@ system's API.
 
 ```
 <?php
+
+/*
+      
+    	Resource strings available to the loadAll() function:
+			sessions;
+			me;
+			time_enties;
+			workspaces;
+			clients;
+			projects;
+			tasks;
+			tags;   	
+    	
+*/
+  	
 $api_token = '00000000000000000000000000000000'; // Valid Toggl.com API token
 $connection = new toggl($api_token);
 $output = '<pre>' . print_r($connection->userLoad(),1) . '</pre>';
+$output .= '<pre>' . print_r($connection->loadAll('projects'),1) . '</pre>';
+  	
 print $output;
 ?>
 ```
