@@ -21,10 +21,10 @@ system's API.
 ```
 <?php
 $api_token = '00000000000000000000000000000000'; // Valid Toggl.com API token
-$connection = new TogglConnection($api_token);
-$time_entry = TogglTimeEntry::load($connection, 1); // Load time entry #1.
-$time_entry->description = 'New description for #1.'
-$time_entry->save();
+$api_token = '8827568762f8cba64419ef554e8d9e0f'; // Valid Toggl.com API token
+$connection = new toggl($api_token);
+$output = '<pre>' . print_r($connection->userLoad(),1) . '</pre>';
+print $output;
 ?>
 ```
 
