@@ -3,11 +3,11 @@
 Provides a re-usable PHP library for interacting with the Toggl time tracking
 system's API.
 
-* Author: Dave Reid http://www.davereid.net/
-* Website: http://davereid.github.com/toggl-php-sdk/
+* Original Author: Dave Reid http://www.davereid.net/
+* CakePHP Vendor Changes: Joey Novak http://joeynovak.com
+* Website: https://github.com/joeynovak/toggl-php-sdk/
 * License: GPLv2/MIT
 * Thanks: [tanel](https://github.com/tanel)
-* [![Build Status](https://secure.travis-ci.org/davereid/toggl-php-sdk.png?branch=master)](http://travis-ci.org/davereid/toggl-php-sdk)
 
 ## Requirements ##
 
