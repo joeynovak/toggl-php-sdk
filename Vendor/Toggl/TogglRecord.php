@@ -72,18 +72,6 @@ abstract class TogglRecord {
     return $response->data;
   }
 
-  public static function loadMultiple(TogglConnection $connection, array $options = array()) {
-        $class = get_called_class();
-        $response = $connection->request($class::$element_plural_name, $options);
-        $count = 0;
-        foreach ($response->data['data'] as $key => $record) {
-          $response->data['data'][$key] = new $class($connection, $record);
-          $count++;
-        }
-        $response->data['count'] = $count;
-      return $response->data;
-  }
-
   public function save(array $options = array()) {
     $options['method'] = !empty($this->id) ? 'PUT' : 'POST';
     $options['data'][$this::$element_name] = $this->data;
